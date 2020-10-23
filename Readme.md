@@ -8,12 +8,16 @@ This is an incomplete dropbox API client derived from a servant
 generic type definition.
 Additional endpoints are welcome, feel free to make a PR!
 
+
+
 ## History
 This is the result from the great riskbook hackathon
 of oktober 2020
 (also known as festoberhack).
 
 ## Usage
+
+There is an example in `app/exe.hs`.
 
 ### Tools
 Enter the nix shell.
