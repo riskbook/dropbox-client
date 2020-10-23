@@ -21,7 +21,7 @@
 --
 module Dropbox
   ( createClient
-  , dropboxProxy
+  , cliRoutes
   , Dropbox(..)
   , defListFolderRequest
   , FileTag(..)
@@ -33,6 +33,7 @@ module Dropbox
   , LinkRequest(..)
   , TokenRequest(..)
   , TokenBody(..)
+  , dropboxProxy
   ) where
 
 import Control.Exception(throwIO)
