@@ -1,10 +1,10 @@
 name:                dropbox
-version:             0.0.1
+version:             0.0.2
 license:             MIT
 author:              "Riskbook"
 maintainer:          "support@riskbook.com"
 copyright:           "2020 Riskbook"
-github:              "riskbook/dropbox"
+github:              "riskbook/dropbox-client"
 synopsis:            Dropbox API client
 description:         A dropbox API client generated through servant generic.
 category:            API
