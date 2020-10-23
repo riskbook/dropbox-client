@@ -10,7 +10,7 @@ let
   # https://github.com/NixOS/nixpkgs/blob/dbacb52ad8/pkgs/development/haskell-modules/make-package-set.nix#L216
   src = ignore.gitignoreSource ./.;
   cabal2nix =
-    hpkgs.callCabal2nix "template" src {
+    hpkgs.callCabal2nix "dropbox-client" src {
     };
 in
 # https://github.com/NixOS/nixpkgs/blob/dbacb52ad8/pkgs/development/haskell-modules/generic-builder.nix#L13

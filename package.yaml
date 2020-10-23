@@ -1,10 +1,10 @@
-name:                template
-version:             1.0.0
+name:                dropbox-client
+version:             0.0.0
 license:             MIT
-author:              "Jappie Klooster"
-maintainer:          "jappieklooster@hotmail.com"
-copyright:           "2020 Jappie Klooster"
-github:              "jappeace/haskell-template-project"
+author:              "Riskbook"
+maintainer:          "support@riskbook.com"
+copyright:           "2020 Riskbook"
+github:              "riskbook/dropbox-client"
 
 extra-source-files:
 - Readme.md
@@ -19,35 +19,17 @@ ghc-options:
     - -Wincomplete-record-updates
     - -Widentities
 
-# from https://lexi-lambda.github.io/blog/2018/02/10/an-opinionated-guide-to-haskell-in-2018/
-default-extensions:
-  # trivial
-  - EmptyCase
-  - FlexibleContexts
-  - FlexibleInstances
-  - InstanceSigs
-  - MultiParamTypeClasses
-  # only activated once used
-  - LambdaCase
-  - MultiWayIf
-  - NamedFieldPuns
-  - TupleSections
-  # no cost deriving power
-  - DeriveFoldable
-  - DeriveFunctor
-  - DeriveGeneric
-  - DeriveLift
-  - DeriveTraversable
-  - DerivingStrategies
-  - GeneralizedNewtypeDeriving
-  - StandaloneDeriving
-  # used everywhere anyway
-  - OverloadedStrings
-  # ehh syntax
-  - TypeApplications
-
 dependencies:
 - base >= 4.7 && < 5
+- servant-client-core
+- servant-client
+- servant-auth
+- servant-auth-client
+- http-api-data
+- aeson
+- servant
+- http-client-tls
+- text
 
 library:
   source-dirs: src
@@ -57,7 +39,7 @@ executables:
     main:                exe.hs
     source-dirs:         app
     dependencies:
-    - template
+    - dropbox-client
     ghc-options:
     - -threaded
     - -rtsopts
@@ -71,4 +53,5 @@ tests:
     dependencies:
     - hspec
     - hspec-core
-    - template
+    - dropbox-client
+    - aeson-qq
