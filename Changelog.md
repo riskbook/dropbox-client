@@ -1,4 +1,4 @@
-# Change log for dropbox-client 
+# Change log for dropbox 
 
 ## Version 0.0.0 
 

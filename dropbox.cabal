@@ -4,10 +4,13 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           dropbox-client
+name:           dropbox
 version:        0.0.0
-homepage:       https://github.com/riskbook/dropbox-client#readme
-bug-reports:    https://github.com/riskbook/dropbox-client/issues
+synopsis:       Dropbox API client
+description:    A dropbox API client generated through servant generic.
+category:       API
+homepage:       https://github.com/riskbook/dropbox#readme
+bug-reports:    https://github.com/riskbook/dropbox/issues
 author:         Riskbook
 maintainer:     support@riskbook.com
 copyright:      2020 Riskbook
@@ -21,13 +24,13 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/riskbook/dropbox-client
+  location: https://github.com/riskbook/dropbox
 
 library
   exposed-modules:
       Dropbox
   other-modules:
-      Paths_dropbox_client
+      Paths_dropbox
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wredundant-constraints -Wincomplete-record-updates -Widentities
@@ -47,14 +50,14 @@ library
 executable exe
   main-is: exe.hs
   other-modules:
-      Paths_dropbox_client
+      Paths_dropbox
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wredundant-constraints -Wincomplete-record-updates -Widentities -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aeson
     , base >=4.7 && <5
-    , dropbox-client
+    , dropbox
     , http-api-data
     , http-client-tls
     , servant
@@ -71,7 +74,7 @@ test-suite unit
   other-modules:
       DropboxSpec
       Test.TestSpec
-      Paths_dropbox_client
+      Paths_dropbox
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wredundant-constraints -Wincomplete-record-updates -Widentities
@@ -79,7 +82,7 @@ test-suite unit
       aeson
     , aeson-qq
     , base >=4.7 && <5
-    , dropbox-client
+    , dropbox
     , hspec
     , hspec-core
     , http-api-data
