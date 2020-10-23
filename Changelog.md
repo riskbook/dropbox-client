@@ -1,5 +1,14 @@
 # Change log for dropbox 
 
+## Version 0.0.3
+
+Expose token body and token response.
+Api is unusable without these
+
+## Version 0.0.2
+
+Fix github links on hackage
+
 ## Version 0.0.1 
 
 Fix haddock issue
