@@ -31,6 +31,8 @@ module Dropbox
   , path
   , LinkResponse(..)
   , LinkRequest(..)
+  , TokenRequest(..)
+  , TokenBody(..)
   ) where
 
 import Control.Exception(throwIO)
@@ -103,7 +105,6 @@ newtype ListFolderResponse = ListFolderResponse
   { entries :: [Entry]
   } deriving (Generic, FromJSON, Show, Eq)
 
--- https://www.dropbox.com/developers/documentation/http/documentation#oauth2-token
 data TokenRequest = TokenRequest
   { trAccessToken :: Text
   , trExpiresIn :: Maybe Int -- seconds
@@ -146,6 +147,7 @@ data Dropbox route = Dropbox
     _dropbox_list_folder :: route :- "2" :> "files" :> "list_folder" :> Auth '[Bearer] Token :> ReqBody '[JSON] ListFolderRequest :> Post '[JSON] ListFolderResponse
   -- | https://www.dropbox.com/developers/documentation/http/documentation#files-get_temporary_link
   , _dropbox_get_temporary_link :: route :- "2" :> "files" :> "get_temporary_link" :> Auth '[Bearer] Token :> ReqBody '[JSON] LinkRequest :> Post '[JSON] LinkResponse
+  -- | https://www.dropbox.com/developers/documentation/http/documentation#oauth2-token
   , _dropbox_token :: route :- "oauth2" :> "token" :> ReqBody '[FormUrlEncoded] TokenBody :> Post '[JSON] TokenRequest
   } deriving Generic
 
