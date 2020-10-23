@@ -2,7 +2,7 @@
 
 > It doesn't actually replace a USB drive.
 >
-> - BrandomM on hackernews, commenting on the dropbox idea, 2007
+> \- BrandomM on hackernews, commenting on the dropbox idea, 2007
 
 This is an incomplete dropbox API client derived from a servant
 generic type definition.
