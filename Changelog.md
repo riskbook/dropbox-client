@@ -1,5 +1,9 @@
 # Change log for dropbox 
 
+## Version 0.0.1 
+
+Fix haddock issue
+
 ## Version 0.0.0 
 
 + Add suppport for
