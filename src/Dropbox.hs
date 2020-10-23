@@ -141,8 +141,9 @@ newtype LinkResponse = LinkResponse {
 -- then regenerate your token (because it's attached to that)
 data Dropbox route = Dropbox
   -- TODO: implement list folder
+  {
   -- | https://www.dropbox.com/developers/documentation/http/documentation#files-list_folder
-  { _dropbox_list_folder :: route :- "2" :> "files" :> "list_folder" :> Auth '[Bearer] Token :> ReqBody '[JSON] ListFolderRequest :> Post '[JSON] ListFolderResponse
+    _dropbox_list_folder :: route :- "2" :> "files" :> "list_folder" :> Auth '[Bearer] Token :> ReqBody '[JSON] ListFolderRequest :> Post '[JSON] ListFolderResponse
   -- | https://www.dropbox.com/developers/documentation/http/documentation#files-get_temporary_link
   , _dropbox_get_temporary_link :: route :- "2" :> "files" :> "get_temporary_link" :> Auth '[Bearer] Token :> ReqBody '[JSON] LinkRequest :> Post '[JSON] LinkResponse
   , _dropbox_token :: route :- "oauth2" :> "token" :> ReqBody '[FormUrlEncoded] TokenBody :> Post '[JSON] TokenRequest
