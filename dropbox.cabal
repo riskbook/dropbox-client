@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           dropbox
-version:        0.0.3
+version:        0.0.4
 synopsis:       Dropbox API client
 description:    A dropbox API client generated through servant generic.
 category:       API
