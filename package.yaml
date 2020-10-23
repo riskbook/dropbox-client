@@ -23,9 +23,9 @@ ghc-options:
     - -Widentities
 
 dependencies:
-- base >= 4.7 && < 5
+- base >= 4.7 && < 4.15.0
 - servant-client-core
-- servant-client
+- servant-client < 0.19
 - servant-auth
 - servant-auth-client
 - http-api-data

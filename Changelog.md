@@ -2,8 +2,10 @@
 
 ## Version 0.0.3
 
-Expose token body and token response.
-Api is unusable without these
++ Expose token body and token response.
+  Api is unusable without these
++ Add upper restrictions on ghc and servant
+
 
 ## Version 0.0.2
 
